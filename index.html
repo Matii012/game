@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <title>Game</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="contenedor">
+            
+        </div>
+    </div>
+
+    <h1>Conctactame para más juegos así</h1>
+
+
+    <form class="contact-form">
+        <legend>Envíanos Tu Comentario!</legend>
+        <input type="text" name="name" placeholder="Nombre" title="El Nombre Solo Acepta Letras y Espacios" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+        <input type="email" name="email" id="" placeholder="Email" title="Email Incorrecto" pattern="^[a-z0-9._%+-]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <input type="text" name="subject" placeholder="Asunto" title="El Asunto Es Requerido" required>
+        <textarea name="message" id="" cols="50" rows="5" placeholder="Introduce tu mensaje" title="Tu mensaje no puede sobre pasar los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+        <input type="submit" value="Enviar">
+        <div class="contact-form-loader none">
+            <img src="img/oval.svg" alt="Cargando">
+        </div>
+        <div class="contact-form-response none">
+            <p>Los Datos Han Sido Enviados Con Éxito</p>
+        </div>
+
+    </form>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts/scripts.js"></script>
+    <!-- <script src="scripts/index-dom.js"></script> -->
+
+</body>
+</html>
