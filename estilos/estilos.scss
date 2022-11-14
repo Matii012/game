@@ -47,7 +47,7 @@
     font-family: sans-serif;
 }
 
-.contact-form input[type="submit"]{
+.contact-form #btn[type="submit"]{
     width: 50%;
     font-weight: bold;
     cursor: pointer;
@@ -160,3 +160,30 @@ h1{
 }
 
 
+.dark-theme-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: yellow;
+    color: wheat;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover{
+background-color: darkgoldenrod;
+color: rgb(141, 125, 96);
+}
+
+.dark-mode{
+    background-color: black;
+    color: rgb(245, 245, 106);
+}

@@ -1,7 +1,10 @@
-const d = document;
+const d = document,
+ls = localStorage;
 d.addEventListener("DOMContentLoaded",(e)=>{
     contactForm();
+
 })
+darkTheme(".dark-theme-btn", "dark-mode");
 
 
 function contactForm(){
@@ -40,6 +43,7 @@ function contactForm(){
 
     d.addEventListener("submit",e=>{
         e.preventDefault();
+        document.getElementById("btn").disabled = true;
         Swal.fire({
             title: 'Se Envió El Formulario!',
             text: 'Pronto Te Responderemos!',
@@ -253,4 +257,43 @@ function cambiarDireccion(){
         xDireccionBola = 2
         return
     }
+}
+
+
+/* ------------------------- CAMBIO DE TEMA DE FONDO ------------------------ */
+
+
+function darkTheme(btn, classDark){
+    const $ThemeBtn = d.querySelector(btn),
+    $selectors = d.querySelectorAll("[data-dark]");
+    // console.log($selectors);
+
+    let moon = "🌙",
+        sun ="☀️";
+    const lightMode = () =>{$selectors.forEach((el)=> el.classList.remove(classDark));
+        $ThemeBtn.textContent =moon;
+        ls.setItem("theme", "light");
+    }
+
+    const darkMode = () =>{
+        $selectors.forEach((el)=> el.classList.add(classDark));
+        $ThemeBtn.textContent =sun;
+        ls.setItem("theme", "dark")
+    }
+
+        d.addEventListener("click", e=>{
+            if(e.target.matches(btn)){
+                if($ThemeBtn.textContent === moon){
+                    darkMode();
+                }else {
+                    lightMode();
+                }
+            }
+        });
+    
+    d.addEventListener("DOMContentLoaded", e=>{
+        if(ls.getItem("theme") === null ) ls.setItem("theme", "light");
+        if(ls.getItem("theme") === "light") lightMode();
+        if(ls.getItem("theme") === "dark")darkMode();
+    })
 }

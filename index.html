@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-dark>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="sweetalert2.min.css">
     <title>Game</title>
 </head>
-<body>
+<body data-dark>
     
     <div class="container">
         <div class="contenedor">
@@ -25,7 +25,8 @@
         <input type="email" name="email" id="" placeholder="Email" title="Email Incorrecto" pattern="^[a-z0-9._%+-]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
         <input type="text" name="subject" placeholder="Asunto" title="El Asunto Es Requerido" required>
         <textarea name="message" id="" cols="50" rows="5" placeholder="Introduce tu mensaje" title="Tu mensaje no puede sobre pasar los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
-        <input type="submit" value="Enviar">
+        <button id="btn" type="submit" value="Enviar">Enviar</button>
+        <!-- <input type="submit" value="Enviar"> -->
         <div class="contact-form-loader none">
             <img src="img/oval.svg" alt="Cargando">
         </div>
@@ -34,6 +35,9 @@
         </div>
 
     </form>
+
+
+    <button class="dark-theme-btn">🌙</button>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts/scripts.js"></script>
